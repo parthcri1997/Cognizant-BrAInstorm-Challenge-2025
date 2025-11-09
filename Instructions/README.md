@@ -1,34 +1,41 @@
-# Instructions & Demo Guide
+# Cognizant BrAInstorm Challenge 2025
 
-Document exactly how judges or mentors can experience your solution. Update this file as the project evolves so it remains the single source of truth.
+## Event Overview
+The Cognizant BrAInstorm Challenge brings together students from diverse disciplines to explore how artificial intelligence can drive sustainable change. Over one high-energy weekend, teams collaborate with Cognizant mentors to imagine, design, and prototype AI solutions that align with key United Nations Sustainable Development Goals (UN SDGs). Keep your code, slides, and documentation in this repo so judges and mentors can quickly understand your impact story.
 
-## Quick Start
-1. Clone the repo and check out your feature branch.
-2. Install dependencies: `TODO: add command (e.g., pip install -r requirements.txt)`.
-3. Set required environment variables or secrets (list them below).
-4. Run the project locally using the commands in the next section.
+## Repository Structure
+- `Codebase/` — source code, notebooks, scripts, and setup utilities needed to reproduce the solution.
+- `Slides/` — the presentation deck you will use for live demos or judging videos.
+- `Instructions/` — concise runbook or demo guide. Include commands to run locally, environment variables, and links to any hosted prototype.
 
-## Local Run Commands
-| Step | Command | Notes |
-| --- | --- | --- |
-| Install | `TODO` | e.g., create virtualenv, install packages |
-| Train | `TODO` | mention dataset location |
-| Evaluate | `TODO` | describe metrics output |
-| Serve | `TODO` | e.g., `uvicorn app:app --reload` |
-| Frontend | `TODO` | e.g., `npm run dev` |
+## Submission Workflow
+1. **Fork** this repository to your personal or team GitHub account and make it public.
+2. **Clone** your fork locally and create a feature branch named after your team (for example, `despicableteam`).
+3. **Build** your solution, keeping all code in `Codebase/`, the final deck in `Slides/`, and run/demo notes in `Instructions/`. Remove large raw datasets or secrets before you push.
+4. **Document** any required setup commands (install, train, evaluate) either inside `Codebase/` or centrally in `Instructions/` so judges can follow a single source of truth.
+5. **Commit and push** the finalized work to your fork. Keep your feature branch up to date until submission closes.
+6. **Submit the Airtable form** with your repository link (see below). There is no pull request back to the upstream repo.
 
-## Environment Variables
-| Name | Purpose | Example |
-| --- | --- | --- |
-| `API_KEY` | Access external API | `sk-xxxxx` |
-| `MODEL_PATH` | Location of model weights | `models/best.ckpt` |
+## Final Submission Checklist
+- `Codebase/` is runnable, includes environment/setup notes, and references any external data sources or licenses.
+- `Slides/` contains the final presentation (PDF or PPTX recommended) that judges will see.
+- `Instructions/` clearly states how to run the project locally, required credentials, or links to any hosted demo.
+- Sensitive or proprietary data has been stripped from the repo.
+- All open-source dependencies and datasets are properly attributed inside the documentation or slides.
+- The repository is public so reviewers can access it without extra permissions.
 
-## Hosted Demo / Video
-- Live app: [Add URL](https://example.com)
-- Video walkthrough: [Add URL](https://example.com/video)
+## Submit to the Organizers
+Complete the Cognizant BrAInstorm submission form here: https://airtable.com/appkB4tLGaUIf7rIf/pagoY5pjgnVdJZmmo/form
 
-## Troubleshooting
-- Common issue 1 → resolution steps.
-- Common issue 2 → resolution steps.
+The form will request:
+- Team name, member list, and a primary contact email.
+- A concise project summary (what you built and why it matters).
+- A URL to your fork (feature branch or main branch) so judges can inspect the code and slides.
+- Optional supporting links (demo video, hosted prototype, datasets) if applicable.
 
-Keep this guide concise and up to date—reviewers will follow it verbatim.
+Ensure the form is submitted before the challenge deadline. The organizing team will use your fork link for primary judging, so verify it matches the exact commit intended for evaluation.
+
+## Questions or Support
+- Use the official Cognizant BrAInstorm Discord (or the event’s chosen chat) for mentor support.
+- Tag Cognizant mentors for dataset or tooling help, and contact the organizing team through the Airtable form for access issues.
+- If something breaks in this template, open an issue in your fork so your team keeps track of fixes.
