@@ -73,9 +73,9 @@ frontend/index.html
 ---
 
 ## Hosted Demo / Video
-  
-- **Video walkthrough:** [Add URL here](https://example.com/video)
 
+- **Video walkthrough:** [Video URL](https://drive.google.com/drive/folders/1IOqOCwEecSzimVnoXX1RG4NGTFh4xbOw?usp=sharing)
+- **Repository URL:** [Repository URL](https://github.com/parthcri1997/Cognizant-BrAInstorm-Challenge-2025)
 ---
 
 ## Troubleshooting
