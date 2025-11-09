@@ -1,41 +1,103 @@
-# Cognizant BrAInstorm Challenge 2025
 
-## Event Overview
-The Cognizant BrAInstorm Challenge brings together students from diverse disciplines to explore how artificial intelligence can drive sustainable change. Over one high-energy weekend, teams collaborate with Cognizant mentors to imagine, design, and prototype AI solutions that align with key United Nations Sustainable Development Goals (UN SDGs). Keep your code, slides, and documentation in this repo so judges and mentors can quickly understand your impact story.
+# ReVogue - Hackathon Project
 
-## Repository Structure
-- `Codebase/` — source code, notebooks, scripts, and setup utilities needed to reproduce the solution.
-- `Slides/` — the presentation deck you will use for live demos or judging videos.
-- `Instructions/` — concise runbook or demo guide. Include commands to run locally, environment variables, and links to any hosted prototype.
+**Tagline:** *"Fashion Forward. Planet Friendly."*  
 
-## Submission Workflow
-1. **Fork** this repository to your personal or team GitHub account and make it public.
-2. **Clone** your fork locally and create a feature branch named after your team (for example, `despicableteam`).
-3. **Build** your solution, keeping all code in `Codebase/`, the final deck in `Slides/`, and run/demo notes in `Instructions/`. Remove large raw datasets or secrets before you push.
-4. **Document** any required setup commands (install, train, evaluate) either inside `Codebase/` or centrally in `Instructions/` so judges can follow a single source of truth.
-5. **Commit and push** the finalized work to your fork. Keep your feature branch up to date until submission closes.
-6. **Submit the Airtable form** with your repository link (see below). There is no pull request back to the upstream repo.
+ReVogue is an AI-driven solution that helps users make sustainable fashion choices by analyzing clothing impact and promoting circular economy practices. Judges and mentors can follow this guide to quickly run and explore the solution.
 
-## Final Submission Checklist
-- `Codebase/` is runnable, includes environment/setup notes, and references any external data sources or licenses.
-- `Slides/` contains the final presentation (PDF or PPTX recommended) that judges will see.
-- `Instructions/` clearly states how to run the project locally, required credentials, or links to any hosted demo.
-- Sensitive or proprietary data has been stripped from the repo.
-- All open-source dependencies and datasets are properly attributed inside the documentation or slides.
-- The repository is public so reviewers can access it without extra permissions.
+---
 
-## Submit to the Organizers
-Complete the Cognizant BrAInstorm submission form here: https://airtable.com/appkB4tLGaUIf7rIf/pagoY5pjgnVdJZmmo/form
+## Quick Start
 
-The form will request:
-- Team name, member list, and a primary contact email.
-- A concise project summary (what you built and why it matters).
-- A URL to your fork (feature branch or main branch) so judges can inspect the code and slides.
-- Optional supporting links (demo video, hosted prototype, datasets) if applicable.
+1. Clone the repository and check out your feature branch:
 
-Ensure the form is submitted before the challenge deadline. The organizing team will use your fork link for primary judging, so verify it matches the exact commit intended for evaluation.
+```bash
+git clone <your-repo-url>
+cd Cognizant_BrAInstorm_challenge_hackathon_2025/CarbonTool
+git checkout <feature-branch>
+```
 
-## Questions or Support
-- Use the official Cognizant BrAInstorm Discord (or the event’s chosen chat) for mentor support.
-- Tag Cognizant mentors for dataset or tooling help, and contact the organizing team through the Airtable form for access issues.
-- If something breaks in this template, open an issue in your fork so your team keeps track of fixes.
+2. Set up a Python virtual environment and install dependencies:
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+.\venv\Scripts\activate.bat
+pip install --upgrade pip
+pip install --no-cache-dir -r requirements.txt
+```
+
+3. **Set your OpenAI API key**:  
+Open `backend/main.py` and replace the placeholder `OPENAI_API_KEY` with your OpenAI API key:
+
+```python
+OPENAI_API_KEY = "your_openai_api_key_here"  # Replace this with your key
+```
+
+4. Run the backend server locally:
+
+```bash
+uvicorn backend.main:app --reload
+```
+
+5. Open the frontend HTML page directly in a browser:
+
+```text
+frontend/index.html
+```
+
+> No installation or frontend server is required. All frontend interactions will call the running backend API.
+
+---
+
+## Local Run Commands
+
+| Step       | Command                                                                                     | Notes                                      |
+|------------|---------------------------------------------------------------------------------------------|-------------------------------------------|
+| Install    | `python -m venv venv && .\venv\Scripts\activate.bat && pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt` | Creates virtualenv and installs dependencies |
+| Server      | `uvicorn backend.main:app --reload`                                                         | Starts backend API at `http://127.0.0.1:8000` |
+| Frontend   | Open `frontend/index.html` in a browser                                                     | Static HTML page; no server required      |
+
+---
+
+## Environment Variables (Temporary)
+
+> For the hackathon/demo, just replace `OPENAI_API_KEY` directly in `main.py`.
+
+| Name              | Purpose                  | Example                  |
+|------------------|--------------------------|-------------------------|
+| `OPENAI_API_KEY`  | Access OpenAI API         | `"sk-xxxxxxxxxxxxxxxx"` |
+| `DATA_PATH`       | Path to input dataset (if needed) | `"data/dataset.csv"`    |
+
+---
+
+## Hosted Demo / Video
+  
+- **Video walkthrough:** [Add URL here](https://example.com/video)
+
+---
+
+## Troubleshooting
+
+- **Issue:** `venv not activating / script execution blocked`  
+  **Resolution:** Run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` in PowerShell.  
+
+- **Issue:** Dependencies fail to install  
+  **Resolution:** Upgrade pip `pip install --upgrade pip` and use `--no-cache-dir`.  
+
+- **Issue:** Backend server not running  
+  **Resolution:** Ensure `uvicorn` is installed and `OPENAI_API_KEY` is set correctly in `main.py`.  
+
+---
+
+## Notes for Judges
+
+- Replace `OPENAI_API_KEY` in `backend/main.py` with your key.  
+- Run the backend with `uvicorn backend.main:app --reload`.  
+- Open the `frontend/index.html` file in a browser to interact with ReVogue.  
+- All outputs (JSON or predictions) are served via API endpoints from the backend.  
+
+---
+
+ReVogue empowers users to make **fashion choices that are stylish, ethical, and sustainable**—combining AI insights with environmental consciousness.
